@@ -36,6 +36,21 @@
             lblGold = new Label();
             lblExperience = new Label();
             lblLevel = new Label();
+            label5 = new Label();
+            cboWeapons = new ComboBox();
+            cboPotions = new ComboBox();
+            btnUseWeapon = new Button();
+            btnUsePotion = new Button();
+            btnNorth = new Button();
+            btnEast = new Button();
+            btnSouth = new Button();
+            btnWest = new Button();
+            rtbLocation = new RichTextBox();
+            richTextBox1 = new RichTextBox();
+            dgvInventory = new DataGridView();
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvInventory).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -110,11 +125,151 @@
             lblLevel.TabIndex = 4;
             lblLevel.Text = "label8";
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(617, 531);
+            label5.Name = "label5";
+            label5.Size = new Size(76, 15);
+            label5.TabIndex = 8;
+            label5.Text = "Select Action";
+            // 
+            // cboWeapons
+            // 
+            cboWeapons.FormattingEnabled = true;
+            cboWeapons.Location = new Point(369, 559);
+            cboWeapons.Name = "cboWeapons";
+            cboWeapons.Size = new Size(121, 23);
+            cboWeapons.TabIndex = 9;
+            cboWeapons.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // cboPotions
+            // 
+            cboPotions.FormattingEnabled = true;
+            cboPotions.Location = new Point(369, 593);
+            cboPotions.Name = "cboPotions";
+            cboPotions.Size = new Size(121, 23);
+            cboPotions.TabIndex = 10;
+            // 
+            // btnUseWeapon
+            // 
+            btnUseWeapon.Location = new Point(620, 559);
+            btnUseWeapon.Name = "btnUseWeapon";
+            btnUseWeapon.Size = new Size(75, 23);
+            btnUseWeapon.TabIndex = 11;
+            btnUseWeapon.Text = "Use";
+            btnUseWeapon.UseVisualStyleBackColor = true;
+            // 
+            // btnUsePotion
+            // 
+            btnUsePotion.Location = new Point(620, 593);
+            btnUsePotion.Name = "btnUsePotion";
+            btnUsePotion.Size = new Size(75, 23);
+            btnUsePotion.TabIndex = 12;
+            btnUsePotion.Text = "Use";
+            btnUsePotion.UseVisualStyleBackColor = true;
+            // 
+            // btnNorth
+            // 
+            btnNorth.Location = new Point(493, 433);
+            btnNorth.Name = "btnNorth";
+            btnNorth.Size = new Size(75, 23);
+            btnNorth.TabIndex = 13;
+            btnNorth.Text = "North";
+            btnNorth.UseVisualStyleBackColor = true;
+            // 
+            // btnEast
+            // 
+            btnEast.Location = new Point(573, 457);
+            btnEast.Name = "btnEast";
+            btnEast.Size = new Size(75, 23);
+            btnEast.TabIndex = 14;
+            btnEast.Text = "East";
+            btnEast.UseVisualStyleBackColor = true;
+            // 
+            // btnSouth
+            // 
+            btnSouth.Location = new Point(493, 487);
+            btnSouth.Name = "btnSouth";
+            btnSouth.Size = new Size(75, 23);
+            btnSouth.TabIndex = 15;
+            btnSouth.Text = "South";
+            btnSouth.UseVisualStyleBackColor = true;
+            // 
+            // btnWest
+            // 
+            btnWest.Location = new Point(412, 457);
+            btnWest.Name = "btnWest";
+            btnWest.Size = new Size(75, 23);
+            btnWest.TabIndex = 16;
+            btnWest.Text = "West";
+            btnWest.UseVisualStyleBackColor = true;
+            // 
+            // rtbLocation
+            // 
+            rtbLocation.Location = new Point(347, 19);
+            rtbLocation.Name = "rtbLocation";
+            rtbLocation.ReadOnly = true;
+            rtbLocation.Size = new Size(360, 105);
+            rtbLocation.TabIndex = 17;
+            rtbLocation.Text = "";
+            // 
+            // richTextBox1
+            // 
+            richTextBox1.Location = new Point(347, 286);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.ReadOnly = true;
+            richTextBox1.Size = new Size(360, 105);
+            richTextBox1.TabIndex = 18;
+            richTextBox1.Text = "";
+            // 
+            // dgvInventory
+            // 
+            dgvInventory.AllowUserToAddRows = false;
+            dgvInventory.AllowUserToDeleteRows = false;
+            dgvInventory.AllowUserToResizeRows = false;
+            dgvInventory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvInventory.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dgvInventory.Location = new Point(16, 130);
+            dgvInventory.Name = "dgvInventory";
+            dgvInventory.ReadOnly = true;
+            dgvInventory.RowHeadersVisible = false;
+            dgvInventory.Size = new Size(312, 309);
+            dgvInventory.TabIndex = 19;
+            dgvInventory.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.AllowUserToResizeRows = false;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dataGridView1.Location = new Point(16, 446);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.Size = new Size(312, 189);
+            dataGridView1.TabIndex = 20;
+            // 
             // SuperAdventure
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(719, 651);
+            Controls.Add(dataGridView1);
+            Controls.Add(dgvInventory);
+            Controls.Add(richTextBox1);
+            Controls.Add(rtbLocation);
+            Controls.Add(btnWest);
+            Controls.Add(btnSouth);
+            Controls.Add(btnEast);
+            Controls.Add(btnNorth);
+            Controls.Add(btnUsePotion);
+            Controls.Add(btnUseWeapon);
+            Controls.Add(cboPotions);
+            Controls.Add(cboWeapons);
+            Controls.Add(label5);
             Controls.Add(lblHitPoints);
             Controls.Add(lblGold);
             Controls.Add(lblExperience);
@@ -125,6 +280,8 @@
             Controls.Add(label1);
             Name = "SuperAdventure";
             Text = "My Game";
+            ((System.ComponentModel.ISupportInitialize)dgvInventory).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -139,5 +296,18 @@
         private Label lblGold;
         private Label lblExperience;
         private Label lblLevel;
+        private Label label5;
+        private ComboBox cboWeapons;
+        private ComboBox cboPotions;
+        private Button btnUseWeapon;
+        private Button btnUsePotion;
+        private Button btnNorth;
+        private Button btnEast;
+        private Button btnSouth;
+        private Button btnWest;
+        private RichTextBox rtbLocation;
+        private RichTextBox richTextBox1;
+        private DataGridView dgvInventory;
+        private DataGridView dataGridView1;
     }
 }

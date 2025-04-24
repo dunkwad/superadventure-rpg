@@ -17,5 +17,15 @@ namespace SuperAdventure
 
             Location location = new Location(1, "Home", "This is your house.");
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
