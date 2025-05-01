@@ -46,7 +46,7 @@
             btnSouth = new Button();
             btnWest = new Button();
             rtbLocation = new RichTextBox();
-            richTextBox1 = new RichTextBox();
+            rtbMessages = new RichTextBox();
             dgvInventory = new DataGridView();
             dataGridView1 = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dgvInventory).BeginInit();
@@ -219,14 +219,14 @@
             rtbLocation.TabIndex = 17;
             rtbLocation.Text = "";
             // 
-            // richTextBox1
+            // rtbMessages
             // 
-            richTextBox1.Location = new Point(347, 286);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.ReadOnly = true;
-            richTextBox1.Size = new Size(360, 105);
-            richTextBox1.TabIndex = 18;
-            richTextBox1.Text = "";
+            rtbMessages.Location = new Point(347, 286);
+            rtbMessages.Name = "rtbMessages";
+            rtbMessages.ReadOnly = true;
+            rtbMessages.Size = new Size(360, 105);
+            rtbMessages.TabIndex = 18;
+            rtbMessages.Text = "";
             // 
             // dgvInventory
             // 
@@ -263,7 +263,7 @@
             ClientSize = new Size(719, 651);
             Controls.Add(dataGridView1);
             Controls.Add(dgvInventory);
-            Controls.Add(richTextBox1);
+            Controls.Add(rtbMessages);
             Controls.Add(rtbLocation);
             Controls.Add(btnWest);
             Controls.Add(btnSouth);
@@ -310,7 +310,7 @@
         private Button btnSouth;
         private Button btnWest;
         private RichTextBox rtbLocation;
-        private RichTextBox richTextBox1;
+        private RichTextBox rtbMessages;
         private DataGridView dgvInventory;
         private DataGridView dataGridView1;
     }
