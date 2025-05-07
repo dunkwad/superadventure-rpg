@@ -23,22 +23,22 @@ namespace SuperAdventure
 
         private void btnNorth_Click(object sender, EventArgs e)
         {
-
+            MoveTo(_player.CurrentLocation.LocationToNorth);
         }
 
         private void btnWest_Click(object sender, EventArgs e)
         {
-
+            MoveTo(_player.CurrentLocation.LocationToWest);
         }
 
         private void btnEast_Click(object sender, EventArgs e)
         {
-
+            MoveTo(_player.CurrentLocation.LocationToEast);
         }
 
         private void btnSouth_Click(object sender, EventArgs e)
         {
-
+            MoveTo(_player.CurrentLocation.LocationToSouth);
         }
 
         private void MoveTo(Location newLocation)
