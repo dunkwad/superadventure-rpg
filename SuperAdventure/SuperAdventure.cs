@@ -169,7 +169,7 @@ namespace SuperAdventure
                         }
 
                         // Give quest rewards
-                        rtbMessages.Text += "You recieve: " + Environment.NewLine;
+                        rtbMessages.Text += "You receive: " + Environment.NewLine;
                         rtbMessages.Text += newLocation.QuestAvailableHere.RewardExperiencePoints.ToString() + " experience points" + Environment.NewLine;
                         rtbMessages.Text += newLocation.QuestAvailableHere.RewardGold.ToString() + " gold" + Environment.NewLine;
                         rtbMessages.Text += newLocation.QuestAvailableHere.RewardItem.Name + Environment.NewLine;
