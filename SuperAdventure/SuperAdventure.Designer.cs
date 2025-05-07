@@ -48,9 +48,9 @@
             rtbLocation = new RichTextBox();
             rtbMessages = new RichTextBox();
             dgvInventory = new DataGridView();
-            dataGridView1 = new DataGridView();
+            dgvQuests = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dgvInventory).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvQuests).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -242,26 +242,26 @@
             dgvInventory.Size = new Size(312, 309);
             dgvInventory.TabIndex = 19;
             // 
-            // dataGridView1
+            // dgvQuests
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.AllowUserToResizeRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.EditMode = DataGridViewEditMode.EditProgrammatically;
-            dataGridView1.Location = new Point(16, 446);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.Size = new Size(312, 189);
-            dataGridView1.TabIndex = 20;
+            dgvQuests.AllowUserToAddRows = false;
+            dgvQuests.AllowUserToDeleteRows = false;
+            dgvQuests.AllowUserToResizeRows = false;
+            dgvQuests.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvQuests.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dgvQuests.Location = new Point(16, 446);
+            dgvQuests.Name = "dgvQuests";
+            dgvQuests.ReadOnly = true;
+            dgvQuests.RowHeadersVisible = false;
+            dgvQuests.Size = new Size(312, 189);
+            dgvQuests.TabIndex = 20;
             // 
             // SuperAdventure
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(719, 651);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvQuests);
             Controls.Add(dgvInventory);
             Controls.Add(rtbMessages);
             Controls.Add(rtbLocation);
@@ -285,7 +285,7 @@
             Name = "SuperAdventure";
             Text = "My Game";
             ((System.ComponentModel.ISupportInitialize)dgvInventory).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvQuests).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -312,6 +312,6 @@
         private RichTextBox rtbLocation;
         private RichTextBox rtbMessages;
         private DataGridView dgvInventory;
-        private DataGridView dataGridView1;
+        private DataGridView dgvQuests;
     }
 }
