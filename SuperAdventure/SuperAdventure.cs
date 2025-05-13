@@ -172,6 +172,20 @@ namespace SuperAdventure
             }
 
             // Refresh player's inventory list
+            UpdateInventoryListUI();
+
+            // Refresh player's quest list
+            UpdateQuestListUI();
+
+            // Refresh player's weapon combobox
+            UpdateWeaponListUI();
+
+            // Refresh player's potion combobox
+            UpdatePotionListUI();
+        }
+
+        private void UpdateInventoryListUI()
+        {
             dgvInventory.RowHeadersVisible = false;
 
             dgvInventory.ColumnCount = 2;
@@ -188,8 +202,10 @@ namespace SuperAdventure
                     dgvInventory.Rows.Add(new[] { inventoryItem.Details.Name, inventoryItem.Quantity.ToString() });
                 }
             }
+        }
 
-            // Refresh player's quest list
+        private void UpdateQuestListUI()
+        {
             dgvQuests.RowHeadersVisible = false;
 
             dgvQuests.ColumnCount = 2;
@@ -203,20 +219,22 @@ namespace SuperAdventure
             {
                 dgvQuests.Rows.Add(new[] { playerQuest.Details.Name, playerQuest.IsCompleted.ToString() });
             }
+        }
 
-            // Refresh player's weapon combobox
+        private void UpdateWeaponListUI()
+        {
             List<Weapon> weapons = new List<Weapon>();
             foreach (InventoryItem inventoryItem in _player.Inventory)
             {
-                if(inventoryItem.Details is Weapon)
+                if (inventoryItem.Details is Weapon)
                 {
-                    if(inventoryItem.Quantity > 0)
+                    if (inventoryItem.Quantity > 0)
                     {
                         weapons.Add((Weapon)inventoryItem.Details);
                     }
                 }
             }
-            if(weapons.Count == 0)
+            if (weapons.Count == 0)
             {
                 // If player has no weapons, hide weapon combobox and "Use" button
                 cboWeapons.Visible = false;
@@ -229,20 +247,22 @@ namespace SuperAdventure
                 cboWeapons.ValueMember = "ID";
                 cboWeapons.SelectedIndex = 0;
             }
+        }
 
-            // Refresh player's potion combobox
+        private void UpdatePotionListUI()
+        {
             List<HealingPotion> healingPotions = new List<HealingPotion>();
             foreach (InventoryItem inventoryItem in _player.Inventory)
             {
-                if(inventoryItem.Details is HealingPotion)
+                if (inventoryItem.Details is HealingPotion)
                 {
-                    if(inventoryItem.Quantity > 0)
+                    if (inventoryItem.Quantity > 0)
                     {
                         healingPotions.Add((HealingPotion)inventoryItem.Details);
                     }
                 }
             }
-            if(healingPotions.Count == 0)
+            if (healingPotions.Count == 0)
             {
                 // If player has no potions, hide potion combobox and "Use" button
                 cboPotions.Visible = false;
