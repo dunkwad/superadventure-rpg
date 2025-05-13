@@ -119,12 +119,12 @@ namespace SuperAdventure
                             // Check if item is in player's inventory and if there is enough quantity
                             foreach(InventoryItem ii in _player.Inventory)
                             {
-                                // Player has item in their inventory
+                                // Check if player has item in their inventory
                                 if(ii.Details.ID == qci.Details.ID)
                                 {
                                     foundItemInPlayersInventory = true;
 
-                                    // Player does not have enough quantity of item for the quest
+                                    // Check if player does not have enough quantity of item for the quest
                                     if(ii.Quantity < qci.Quantity)
                                     {
                                         playerHasAllItemsToCompleteQuest = false;
